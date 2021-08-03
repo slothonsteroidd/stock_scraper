@@ -28,7 +28,7 @@ def process_initializer():
     }
 })
 
-    os.remove("items.json")
+    os.remove("./items.json")
     process.crawl(StockScraper)
     process.start()
 
