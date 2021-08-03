@@ -22,13 +22,7 @@ class StockScraper(Spider):
 
 
 def process_initializer():
-    process = CrawlerProcess(settings = {
-    "FEEDS":{
-        "items.json" : {"format":"json"}
-    }
-})
-
-    os.remove("./items.json")
+    process = CrawlerProcess()
     process.crawl(StockScraper)
     process.start()
 
